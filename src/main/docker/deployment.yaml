@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userauth
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+        - name: userauth
+          image: userauth:latest
+          ports:
+            - containerPort: 8080
